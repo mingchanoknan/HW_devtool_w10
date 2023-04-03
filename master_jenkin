@@ -28,7 +28,10 @@
     stage('Build docker') {
         steps {
             dir('HW_devtool_w10') { // change directory to Lab_docker_Jenkins
-                sh 'docker-compose build'
+                script {
+                    sh 'docker-compose build'
+                }    
+                
             }
         }
     }
