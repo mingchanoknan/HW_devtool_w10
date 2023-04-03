@@ -107,7 +107,7 @@ function App() {
 }
       </Col>
       <Col>
-      <h3 className='text-center mb-2'>Output</h3>
+      <h3 className='text-center mb-2 bg-success text-white'>Output</h3>
       { outputImage && (
       <img src={outputImage} width="100%" />
       )
