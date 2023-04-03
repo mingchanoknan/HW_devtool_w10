@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  backend:
+    image:mingchanoknan/backend:lastest
+    ports:
+      - 8088:80
+    build: ./backend
+
+  frontend:
+    image: mingchanoknan/frontend:lastest
+    ports:
+      - 3000:3000
+    build: ./frontend

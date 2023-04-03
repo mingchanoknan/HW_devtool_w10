@@ -1,11 +1,30 @@
   pipeline {
    agent any
-    stages {
-        stage('build') {
-            steps {
-                
-                sh 'echo welcome to first pipeline'
+   stages{
+    stage('login docker') {
+        steps {
+            script {
+                sh 'docker login -u mingchanoknan -p dckr_pat_6bjeRHSv6XXqy6Z40TFEo4B3sxw'
             }
         }
     }
+    stage('docker pull image') {
+        steps {
+            dir('HW_devtool_w10') {
+                echo "Pull . ."
+                sh "docker-compose pull" 
+            }
+            
+       }
+        }
+        
+
+    stage('docker run image') {
+        steps {
+            dir('HW_devtool_w10') {
+                sh "docker-compose up -d" 
+            }
+        }
+    }
+}
 }
