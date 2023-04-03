@@ -100,7 +100,7 @@ function App() {
     </Form>
     <Row className='mt-4'>
       <Col>
-      <h3 className='text-center mb-2 bg-info text-white'>Input</h3>
+      <h3 className='text-center mb-2 bg-primary text-white'>Input</h3>
       { inputImage && (
       <img src={inputImage} width="100%" />
       )
