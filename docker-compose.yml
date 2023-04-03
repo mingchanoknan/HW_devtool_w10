@@ -2,7 +2,7 @@ version: "3"
 
 services:
   backend:
-    image:mingchanoknan/backend:lastest
+    image: mingchanoknan/backend:lastest
     ports:
       - 8088:80
     build: ./backend

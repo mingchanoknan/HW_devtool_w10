@@ -28,11 +28,8 @@
     stage('Build docker') {
         steps {
             dir('HW_devtool_w10') { // change directory to Lab_docker_Jenkins
-                script {
                     sh 'docker-compose build'
-                }    
-                
-            }
+                }
         }
     }
     stage('Push to docker hub') {
